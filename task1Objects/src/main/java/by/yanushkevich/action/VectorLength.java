@@ -9,5 +9,6 @@ public class VectorLength {
 				double oY = point2.getY() - point1.getY();
 				double oZ = point2.getZ() - point1.getZ();
 				return new Point3D(oX, oY, oZ);
+
 		}
 }
