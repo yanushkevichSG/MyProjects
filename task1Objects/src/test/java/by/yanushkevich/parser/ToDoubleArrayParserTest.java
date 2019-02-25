@@ -6,10 +6,9 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.testng.Assert.*;
-
 public class ToDoubleArrayParserTest {
-	private  final ToDoubleArrayParser parser = new ToDoubleArrayParser();
+
+	private final ToDoubleArrayParser parser = new ToDoubleArrayParser();
 
 	@Test
 	public void ValidThreeDoubleArrays(){

@@ -16,7 +16,7 @@ public class PointsArrayCreator {
 	private PointsArrayCreator(){}
 
 	private static class PointsArrayCreatorHolder{
-		private static final PointsArrayCreator INSTANCE = new PointsArrayCreator();
+		private final static PointsArrayCreator INSTANCE = new PointsArrayCreator();
 	}
 
 	public static PointsArrayCreator getInstance(){

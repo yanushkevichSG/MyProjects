@@ -15,17 +15,18 @@ import static org.testng.Assert.*;
 public class DataReaderTest {
 	private final DataReader reader = new DataReader();
 
+
 	@Test(expectedExceptions = NotSupportedPathException.class)
 	public void ThrowNotSupportedPathException() throws IOException {
 		String notValidPath = File.separator  + "datas" + File.separator + "data.txt";
-		reader.readAllLines(Paths.get(notValidPath), Charset.defaultCharset());
+		reader.readAllData(Paths.get(notValidPath), Charset.defaultCharset());
 	}
 
 	@Test
 	public  void ValidReadEightLinesFromFile() throws IOException {
 		List<String> strings;
 		String validPath = "data" + File.separator + "data.txt";
-		strings =  reader.readAllLines(Paths.get(validPath), Charset.defaultCharset());
+		strings =  reader.readAllData(Paths.get(validPath), Charset.defaultCharset());
 		Assert.assertEquals(strings.size(),8);
 
 
@@ -35,7 +36,7 @@ public class DataReaderTest {
 	public void ValidReadZeroLinesFromEmptyFile() throws IOException {
 		List<String> strings;
 		String validPath = "data" + File.separator + "empty.txt";
-		strings =  reader.readAllLines(Paths.get(validPath), Charset.defaultCharset());
+		strings =  reader.readAllData(Paths.get(validPath), Charset.defaultCharset());
 		Assert.assertEquals(strings.size(),0);
 
 	}

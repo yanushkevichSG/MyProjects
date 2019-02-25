@@ -1,22 +1,19 @@
 package by.yanushkevich.reader;
 
 import by.yanushkevich.exception.NotSupportedPathException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.util.List;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DataReader {
 	private static final Logger LOGGER = LogManager.getLogger(DataReader.class);
 
-
-	public List<String> readAllLines(Path path, Charset charset) throws IOException {
+	public List<String> readAllData(Path path, Charset charset) throws IOException {
 		try {
 			LOGGER.info("Start reading lines from: " + path);
 			List<String> lines = Files.readAllLines(path, charset);
